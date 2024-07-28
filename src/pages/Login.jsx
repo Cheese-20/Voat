@@ -1,10 +1,11 @@
 // import { Input } from "../components/Inputs";
-import {useState } from "react"
+import {useState ,useEffect} from "react"
 import supabase from "../config/supabaseClient";
 import './login.css' 
+import { useNavigate } from "react-router-dom";
 
 export const Login =()=>{
-
+    const navigate = useNavigate();
     //* all states that must be edited when creating a new account 
     const [Name ,setName] = useState('');
     const [Surname ,setSurname] = useState('');
@@ -40,7 +41,6 @@ export const Login =()=>{
                 
     }
 //! Validates and checks if user exists  
-
 const [userInfo , setUserInfo] = useState(null);
 //! to be used when we switch pages
 const [Change ,setChange] = useState(false);
@@ -76,6 +76,14 @@ const getUser= async () =>{
                 console.log(userInfo)
                 console.log(Change)
     }
+
+    // dependent on the navigate and change state 
+    useEffect(() => {
+        if (Change) {
+          navigate('/home');
+        }
+      }, [Change, navigate]);
+    
         
 
     //! must be used when displaying the users information incase of account detail changes
@@ -148,6 +156,7 @@ const getUser= async () =>{
     };
 
     return(
+    
         <div className={`Container ${isActive ? 'active' : ''}`}>
             <div className="form-container signUp">
                 <form onSubmit={handleSubmit}>
