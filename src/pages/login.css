@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-body{
+.Logpage{
     background: linear-gradient(to right, #891609 ,#DFA06E);
     display :flex;
     align-items: center;

@@ -156,7 +156,7 @@ const getUser= async () =>{
     };
 
     return(
-    
+        <div className="Logpage">
         <div className={`Container ${isActive ? 'active' : ''}`}>
             <div className="form-container signUp">
                 <form onSubmit={handleSubmit}>
@@ -247,6 +247,7 @@ const getUser= async () =>{
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     )
 }
