@@ -1,0 +1,9 @@
+body{
+    background: linear-gradient(to right, #891609 ,#DFA06E);
+} 
+
+h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

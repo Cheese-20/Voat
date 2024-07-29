@@ -1,7 +1,7 @@
 // import { Input } from "../components/Inputs";
 import {useState ,useEffect} from "react"
 import supabase from "../config/supabaseClient";
-import './login.css' 
+import './styles/login.css'
 import { useNavigate } from "react-router-dom";
 
 export const Login =()=>{
