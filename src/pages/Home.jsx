@@ -1,6 +1,8 @@
 import './styles/home.css'
 
 export const Home = ()=>{
+
+    
     return(
         <div className='name'>
             <h1>Trending Podcasts</h1>
